@@ -46,7 +46,10 @@ _User Story 6: [Matching]_
 As a **lifelong-learner** I want to know which offerings best match the problem I try to solve/goal I try to reach, such that I can make deliberate decisions which enable me to solve my problem or reach my goal
 
 
+## Defining the system boundaries
+We'll be leveraging a context diagram to create a simplified representation of our system which is understandable for a wide audience (i.e. technical and non-technical stakeholders). At first, we focus on the stakeholders we try to empower and leave the operational part out of scope (i.e. admin user). The context diagram as depicted in Figure 1:
 
+![Figure 1: Diversity Cyber Council Context Diagram](../assets/context_diagram.png)
 
 
 - kans krijgen
