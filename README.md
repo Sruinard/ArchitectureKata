@@ -1,8 +1,36 @@
 # ArchitectureKata
 
+## Executive Summary
+_situation_
+We are assigned to task to develop a platform, which: 
+1) Solves the issues stemming from the decentralization and lack of support between nonprofits (i.e. gaps of service and reduced overall impact).
+2) Improves the visibility of nonprofit groups and offerings; and remove barriers of access to the people we aim to serve.
 
-# Definitions
-Idea taken from Ubiquitous Language (Domain Driven Design)
+_complication_
+
+_resolution_
+We propose
+
+## Narrative
+>“The test of our progress is not whether we add more to the abundance of those who have much; it is whether we provide enough for those who have too little.”
+― Franklin D. Roosevelt
+
+Diversity Cyber Council has launched a program named _Spotlight Platform_ with the goal to establish a sustainable and diverse talent pipeline that extends career equity to underrepresented demographics by providing access to competent training programs that lead to direct employment opportunities. The project name inherently says it all, there is an abundance of light, we just need to make sure it points at the right person. And for that, we are here to help. We'll guide you through our recommended approach of solving some of the challenges you are facing and transition towards a state in which you'll reap the benefits of the vision you have established.
+
+## Outline
+_Overview_
+- Executive summary
+
+_non technical_
+- Ubiquitous Language
+- Persona's
+- User Stories
+- Context Diagram
+
+_technical_
+
+## Ubiquitous Language (A language shared by all stakeholders)
+Idea taken from Ubiquitous Language (Domain Driven Design): 
 
 - **Non-profit organisation** ("non-profit") Group of people that aims to help under-represented demographics in the tech industry by facilitating education, training, and staffing opportunities to establish a sustainable and diverse talent pipeline to the workforce without a profit motive.
 - **Offering** collection of *services* offered by a *non-profit*
@@ -49,7 +77,7 @@ As a **lifelong-learner** I want to know which offerings best match the problem 
 ## Defining the system boundaries
 We'll be leveraging a context diagram to create a simplified representation of our system which is understandable for a wide audience (i.e. technical and non-technical stakeholders). At first, we focus on the stakeholders we try to empower and leave the operational part out of scope (i.e. admin user). The context diagram as depicted in Figure 1:
 
-![Figure 1: Diversity Cyber Council Context Diagram](../assets/context_diagram.png)
+![Figure 1: Diversity Cyber Council Context Diagram](./assets/context_diagram.png)
 
 
 - kans krijgen
