@@ -79,9 +79,8 @@ We'll be leveraging a context diagram to create a simplified representation of o
 
 ![Figure 1: Diversity Cyber Council Context Diagram](./assets/context_diagram.png)
 
-
-- kans krijgen
-- 'hoe krijgen ze  die CV benop de stapel'
+## Domain Driven Design (DDD) Context Map
+On a high level, the [context diagram](#Defining the system bounderies)
 
 
 
