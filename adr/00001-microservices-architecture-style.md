@@ -3,23 +3,25 @@
 ## Status
 Proposed
 
-## context
+## Context
 Diversity Cyber Council wants to build a platform which models a complex landscape. 
 It has to manage a wide variety of use-cases, needs to integrate with many non-profit offerings which are expected to increase over time while keeping end user ease-of-use central.
 To help people as quickly as possible, time to market is critical and new offerings should be added without much delay.
 
 ## Decision
-We'll leverage a microservices architecture style to improve deployability and time to market. In addition, teams will be built around 
-domains (Domain driven design) to facilitate a ubiquitous language within team boundaries and abstract away.
+We'll leverage a [microservices architecture style](https://en.wikipedia.org/wiki/Microservices) to improve deployability of the solution and time to market of its features. In addition, teams will be built around domains (Domain driven design) to facilitate a ubiquitous language within team boundaries and abstract away.
 
 ## Consequences
-Going for a microservices has the following consequences:
-- improve deployability and time to market
-- Improve testability (test in isolation)
+Opting for a microservices architecture style has the following positive consequences:
+- Improve independent deployability and lower time to market (when done right, services can have independent lifecycle-management)
+- Improve testability (service testing in isolation)
 - Ideal for containerization
+- Indepedentent scalability of the services
 
-downsides:
-- complexity
+The negative consequences of this decision (downsides) are:
+- Increased deployment complexity (more components to deploy)
+- Increased service integration complexity (sevices communicate by contract, which will be subject to changes over time)
+- Increased operational complexity (hosting is not as easy as single VM, monitoring and debugging now becomes distributed) 
 
 _Rejected:_
 - Monolithic:
