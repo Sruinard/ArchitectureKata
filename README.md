@@ -1,27 +1,22 @@
 # Spring 2022 - O'Reilly Architecture Katas
 
-This repository contains the materials offered for submission, for our participation in the 
+This repository contains the materials offered for submission, for our participation in the
 [O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
 
-
 ## TODO - disclaimer that it's not finished
-
-
-
-
-
-
 
 ## Document outline
 
 - [Executive summary](#executive-summary)
 
 _Context and introduction_
+
 - ['Splotlight Platform' - Program narrative](#splotlight-platform-program-narrative)
 - [Ubiquitous Language](#ubiquitous-language-a-language-shared-by-all-stakeholders)
 - [Personas](#personas)
 
 _Technical implementation_
+
 - [User Stories](#user-stories)
 - [System boundaries](#defining-the-system-boundaries)
 - [Context Diagram](#ddd-context-map-in-depth-level-3)
@@ -30,10 +25,9 @@ _Technical implementation_
 
 The proposed solution aims to facilitate people from under-represented demographics in finding non-profit organisations that can help them start or further their career in tech, as well as support non-profit organisations in sharing what they already provide to offer even better guidance and support for the community.
 
-The platform helps candidates discover the most interesting non-profit organisations and the services they offer, tries to keep them engaged and track progress (also for their own insights). This is achieved by excelent search capabilities, non-profit-candidate matching suggestsions and notifications as well as activity insights. 
+The platform helps candidates discover the most interesting non-profit organisations and the services they offer, tries to keep them engaged and track progress (also for their own insights). This is achieved by excelent search capabilities, non-profit-candidate matching suggestsions and notifications as well as activity insights.
 
 The platform allows non-profits to showcase their community offerings, provides an excellent search experience for potential candidates they can serve, identify missing offerings in their portfolio and team-up with other non-profits to achieve a better overall service experience.
-
 
 ## 'Splotlight Platform' Program narrative
 
@@ -41,7 +35,6 @@ The platform allows non-profits to showcase their community offerings, provides 
 > ― Franklin D. Roosevelt
 
 Diversity Cyber Council has launched a program named _Spotlight Platform_ with the goal to establish a sustainable and diverse talent pipeline that extends career equity to underrepresented demographics by providing access to competent training programs that lead to direct employment opportunities. The project name inherently says it all, there is an abundance of light, we just need to make sure it points at the right person. And for that, we are here to help. We'll guide you through our recommended approach of solving some of the challenges you are facing and transition towards a state in which you'll reap the benefits of the vision you have established.
-
 
 ## Ubiquitous Language (A language shared by all stakeholders)
 
@@ -57,16 +50,17 @@ _Idea borrowed from Eric Evan's book on Domain Driven Design - the Ubiquitous La
 
 ## Personas
 
-Two different profile's of the typical user of the platform (i.e. perona's) can be identified and described: 
+Two different profile's of the typical user of the platform (i.e. perona's) can be identified and described:
 
 - **Non-profit (the facilitator)** Kobe, 42, grew up in the suburbs of Chicago. He has witnessed first hand how difficult it can be to break away from stigmas and get a better life. Since 5 years he has been investing his time in helping people from underrepresented backgrounds to land their dream job. One of the things he loves working on is providing teenagers a connected experience. An experience in which they feel supported and empowered. Jonathon is good add coaching and seeing how small pieces of the puzzle fit together.
 
 - **Candidate (the lifelong-learner)** Janine, 28, works 2 jobs at a supermarket and local restaurant, has the smarts and is eager to 'get out' bus doesn't know how. She has an interest in technology and would love to have a career at a tech company, but does not have the right education for it and therefore was not able to land a job in tech. She works long hours and doesn't make enough money to afford expensive training during working hours and the time she has is often fragmented over a day and is.
   She believes that given a chance for an interview, she'll be able to convince the company that she'll be of great value and is willing to learn anything to prove that.
 
-_Note:_ whereas the 'platform administrator' role is certainly also relevant required to operate the platform, no persona was created because a) there is no 'experience' of the platform that they will have to do their administrative tasks, that requires understanding of their character and b) time considerations. 
+_Note:_ whereas the 'platform administrator' role is certainly also relevant required to operate the platform, no persona was created because a) there is no 'experience' of the platform that they will have to do their administrative tasks, that requires understanding of their character and b) time considerations.
 
 ## User stories
+
 The following user-stories were top of mind when considering the usage of the platform:
 
 ### User Story 1: [Engagement]
@@ -105,20 +99,20 @@ On a high level, the [context diagram](#defining-the-system-boundaries) provides
 
 The main parts identified in the context diagram, can roughly be grouped together in the following domains: Non-profits, Candidates, Matching and Insights.
 
-- **Non-profits domain** stores all information about the non-profit organisations, their offerings and services within the platform. It provides onboarding- and search capabilities and is responsible for notifying the activity context about internal events. 
+- **Non-profits domain** stores all information about the non-profit organisations, their offerings and services within the platform. It provides onboarding- and search capabilities and is responsible for notifying the activity context about internal events.
 
-- **Candidates domain** stores all information about the candidates, looking to benefit from the non-profit offerings. It offers search an discovery capabilities, asset storage capabilities (like resume etc.) and request submission capabilities. Also responsible for notifying the activity context about internal events. 
+- **Candidates domain** stores all information about the candidates, looking to benefit from the non-profit offerings. It offers search an discovery capabilities, asset storage capabilities (like resume etc.) and request submission capabilities. Also responsible for notifying the activity context about internal events.
 
 - **Matching domain** service that is able to suggest non-profit-with-non-profit maches as well as candidate-with-non-profit matches. Retrieves data from candidate and non-profit context in order to achieve this. Also responsible for notifying the activity context about internal events.
 
 - **Insights domain** provides insights for candidates, non-profits as well as platform administrators for both operational as well as analytical purposes. It leverages all the beforementioned domains as well as the activities domain (see below).
-
 
 - **Activities domain** receives event notifications from all domains which enables a myriad of event-driven use-cases like notifications, time-series-analytics and engagement insights.
 
 The domain driven design context map looks as follows: ![DDD context map](./assets/DDD-context-map.png).
 
 Please note the following (technical) relations:
+
 - There is a _partnership_ regarding the schema design and implementation between the _matching context_ and _Non-profit/Candidate context_. Althought the Matching context is the consumer, both the non-profits and candidate context reap the benefits from a good matching algorithm, resulting in eagerness from both parties to partner up.
 
 - The _activity context_ implements an _Anti-corruption layer_ to translate any concepts from other domains to its own domain. The activity context plays an important role as it is the central place from which insights can be derived (reports, but also search, discoverabilty and fill-in-the-gap)
@@ -127,12 +121,14 @@ Please note the following (technical) relations:
 
 ### DDD context-map in depth (level 3)
 
+## TODO - disclaimer that we're
 
-## TODO - disclaimer that we're 
 - only foucssing on non-profit domain now - see disclaimer above
 - explanation of diagram
 - 2 ADRs to support tech chosen in this domain: persistence and API
 - The end - long weekend :)
+
+Functionality from the non-profit domain is exposed through a GraphQL endpoint. This decision is documented in [adr 00005 expose functionality through graphql](./adr/00005-expose-fuctionality-through-graphql.md).
 
 ![c4](./assets/c4.png)
 
@@ -152,7 +148,9 @@ Per domain:
 - how service is exposed/communicates with other services
 
 ## Deployment Diagram
+
 summary:
+
 - explain platform choice
 - explain why chosen services
 - explain one other option
@@ -162,10 +160,10 @@ summary:
 
 [Backend for Frontend (BFF)](./adr/0004-backend-for-frontend.md)
 
-
 ## How graphql enables innovation through integration
 
 Summary:
+
 - explain how discoverability improved
 - explain how data integrity improved
 - explain how offering search was improved
@@ -175,12 +173,8 @@ Summary:
 
 Reference: [Diversity Cyber Council Kata Requirements 2022](https://docs.google.com/document/d/1XjEpcGJ87xYg1eWN9eE0_tH7te5HcVAgPvoONLHY4qQ/edit#)
 
-
-
 ### parking
 
-
-
 These will be considered our domains (we'll cover how search and exploration is enabled through our technology choice in [Federated GraphQL](#federated-graphql)).
-Additional to the previously mentioned 4 domains, we identified another domain: 'Activity' as it plays a vital role within the entire solution. 
+Additional to the previously mentioned 4 domains, we identified another domain: 'Activity' as it plays a vital role within the entire solution.
 Consequently, we want to give it a separate domain to emphasize it's importance and have a dedicated team work on it to improve progress and innovation.
