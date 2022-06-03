@@ -1,14 +1,16 @@
 # ArchitectureKata
 
+This repository contains the materials offered for submission, for our participation in the 
+[O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
+
 ## Executive Summary
 
-_situation_
 We are assigned to task to develop a platform, which:
 
 1. Solves the issues stemming from the decentralization and lack of support between nonprofits (i.e. gaps of service and reduced overall impact).
 2. Improves the visibility of nonprofit groups and offerings; and remove barriers of access to the people we aim to serve.
 
-_complication_
+The system needs to
 
 _resolution_
 We propose
