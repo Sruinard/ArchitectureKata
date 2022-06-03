@@ -3,7 +3,8 @@
 This repository contains the materials offered for submission, for our participation in the
 [O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
 
-## TODO - disclaimer that it's not finished
+**Please note**
+Due to personal circumstances we have not been able to get as far as we had hoped. Nevertheless we really appreciate the oppertunity to participate.
 
 ## Document outline
 
@@ -50,7 +51,7 @@ _Idea borrowed from Eric Evan's book on Domain Driven Design - the Ubiquitous La
 
 ## Personas
 
-Two different profile's of the typical user of the platform (i.e. perona's) can be identified and described:
+Two different profiles of the typical user of the platform (i.e. perona's) can be identified and described:
 
 - **Non-profit (the facilitator)** Kobe, 42, grew up in the suburbs of Chicago. He has witnessed first hand how difficult it can be to break away from stigmas and get a better life. Since 5 years he has been investing his time in helping people from underrepresented backgrounds to land their dream job. One of the things he loves working on is providing teenagers a connected experience. An experience in which they feel supported and empowered. Jonathon is good add coaching and seeing how small pieces of the puzzle fit together.
 
@@ -121,12 +122,9 @@ Please note the following (technical) relations:
 
 ### DDD context-map in depth (level 3)
 
-## TODO - disclaimer that we're
+**Please note**
+As mentioned, due to limited time we only detailed out the 'non-profit' domain.
 
-- only foucssing on non-profit domain now - see disclaimer above
-- explanation of diagram
-- 2 ADRs to support tech chosen in this domain: persistence and API
-- The end - long weekend :)
 
 Functionality from the non-profit domain is exposed through a GraphQL endpoint. This decision is documented in [adr 00005 expose functionality through graphql](./adr/00005-expose-fuctionality-through-graphql.md).
 
