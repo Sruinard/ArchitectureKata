@@ -1,13 +1,30 @@
-# ArchitectureKata
+# Spring 2022 - O'Reilly Architecture Katas
 
 This repository contains the materials offered for submission, for our participation in the 
 [O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
 
+## Document outline
+
+_Overview_
+
+- [Executive summary](#executive-summary)
+- [Narrative](#narrative)
+
+_non technical_
+
+- [Ubiquitous Language](#ubiquitous-language-a-language-shared-by-all-stakeholders)
+- [Persona's](#personas)
+- [User Stories](#user-stories)
+- [System boundaries](#defining-the-system-boundaries)
+- [Context Diagram](#ddd-context-map-in-depth-level-3)
+
+_technical_
+
+:triangular_flag_on_post: @TODO update when all diagrams are present
+
 ## Executive Summary
 
-
-:triangular_flag_on_post: @TODO
-
+:triangular_flag_on_post: @TODO - check this summary for completeness
 
 We are assigned to task to develop a platform, which:
 
@@ -26,20 +43,7 @@ We propose
 
 Diversity Cyber Council has launched a program named _Spotlight Platform_ with the goal to establish a sustainable and diverse talent pipeline that extends career equity to underrepresented demographics by providing access to competent training programs that lead to direct employment opportunities. The project name inherently says it all, there is an abundance of light, we just need to make sure it points at the right person. And for that, we are here to help. We'll guide you through our recommended approach of solving some of the challenges you are facing and transition towards a state in which you'll reap the benefits of the vision you have established.
 
-## Outline
 
-_Overview_
-
-- Executive summary
-
-_non technical_
-
-- Ubiquitous Language
-- Persona's
-- User Stories
-- Context Diagram
-
-_technical_
 
 ## Ubiquitous Language (A language shared by all stakeholders)
 
