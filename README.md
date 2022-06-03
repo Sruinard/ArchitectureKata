@@ -5,44 +5,33 @@ This repository contains the materials offered for submission, for our participa
 
 ## Document outline
 
-_Overview_
-
 - [Executive summary](#executive-summary)
-- [Narrative](#narrative)
 
-_non technical_
-
+_Context and introduction_
+- ['Splotlight Platform' - Program narrative](#splotlight-platform-program-narrative)
 - [Ubiquitous Language](#ubiquitous-language-a-language-shared-by-all-stakeholders)
 - [Persona's](#personas)
+
+_Technical implementation_
 - [User Stories](#user-stories)
 - [System boundaries](#defining-the-system-boundaries)
 - [Context Diagram](#ddd-context-map-in-depth-level-3)
 
-_technical_
-
-:triangular_flag_on_post: @TODO update when all diagrams are present
-
 ## Executive Summary
 
-:triangular_flag_on_post: @TODO - check this summary for completeness
+The proposed solution aims to facilitate people from under-represented demographics in finding non-profit organisations that can help them start or further their career in tech, as well as support non-profit organisations in sharing what they already provide to offer even better guidance and support for the community.
 
-We are assigned to task to develop a platform, which:
+The platform helps candidates discover the most interesting non-profit organisations and the services they offer, tries to keep them engaged and track progress (also for their own insights). This is achieved by excelent search capabilities, non-profit-candidate matching suggestsions and notifications as well as activity insights. 
 
-1. Solves the issues stemming from the decentralization and lack of support between nonprofits (i.e. gaps of service and reduced overall impact).
-2. Improves the visibility of nonprofit groups and offerings; and remove barriers of access to the people we aim to serve.
+The platform allows non-profits to showcase their community offerings, provides an excellent search experience for potential candidates they can serve, identify missing offerings in their portfolio and team-up with other non-profits to achieve a better overall service experience.
 
-The system needs to
 
-_resolution_
-We propose
-
-## Narrative
+## 'Splotlight Platform' Program narrative
 
 > “The test of our progress is not whether we add more to the abundance of those who have much; it is whether we provide enough for those who have too little.”
 > ― Franklin D. Roosevelt
 
 Diversity Cyber Council has launched a program named _Spotlight Platform_ with the goal to establish a sustainable and diverse talent pipeline that extends career equity to underrepresented demographics by providing access to competent training programs that lead to direct employment opportunities. The project name inherently says it all, there is an abundance of light, we just need to make sure it points at the right person. And for that, we are here to help. We'll guide you through our recommended approach of solving some of the challenges you are facing and transition towards a state in which you'll reap the benefits of the vision you have established.
-
 
 
 ## Ubiquitous Language (A language shared by all stakeholders)
@@ -63,7 +52,7 @@ Two different profile's of the typical user of the platform (i.e. perona's) can 
 
 - **Non-profit (the facilitator)** Kobe, 42, grew up in the suburbs of Chicago. He has witnessed first hand how difficult it can be to break away from stigmas and get a better life. Since 5 years he has been investing his time in helping people from underrepresented backgrounds to land their dream job. One of the things he loves working on is providing teenagers a connected experience. An experience in which they feel supported and empowered. Jonathon is good add coaching and seeing how small pieces of the puzzle fit together.
 
-- **Candidate (the lifelong-learner)** Janine, 28, works 2 jobs at a supermarket and local restaurant, has the smarts and is eager to 'get out' bus doesn't know how. She has an interest in technology and would love to have a career at a tech company, but does not have the right education for it and therefore was not able to land a job in tech. She works long hours and doesn't make enough money to afford expensive training during working hours.
+- **Candidate (the lifelong-learner)** Janine, 28, works 2 jobs at a supermarket and local restaurant, has the smarts and is eager to 'get out' bus doesn't know how. She has an interest in technology and would love to have a career at a tech company, but does not have the right education for it and therefore was not able to land a job in tech. She works long hours and doesn't make enough money to afford expensive training during working hours and the time she has is often fragmented over a day and is.
   She believes that given a chance for an interview, she'll be able to convince the company that she'll be of great value and is willing to learn anything to prove that.
 
 _Note:_ whereas the 'platform administrator' role is certainly also relevant required to operate the platform, no persona was created because a) there is no 'experience' of the platform that they will have to do their administrative tasks, that requires understanding of their character and b) time considerations. 
