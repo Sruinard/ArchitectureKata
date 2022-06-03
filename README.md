@@ -3,6 +3,15 @@
 This repository contains the materials offered for submission, for our participation in the 
 [O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
 
+
+## TODO - disclaimer that it's not finished
+
+
+
+
+
+
+
 ## Document outline
 
 - [Executive summary](#executive-summary)
@@ -118,14 +127,12 @@ Please note the following (technical) relations:
 
 ### DDD context-map in depth (level 3)
 
-Summary:
 
-- explain how we created domains, how did we?
-- reference adr federated graphql: benefits, tradeoffs (the usual part)
-- explain when chosing for events
-- reference adr integration with subgraphs
-
-If we go one level deeper and look at the specifics, we come to the following diagram ![Level 2 Context map](./assets/DDD-service-map-level-2.png)
+## TODO - disclaimer that we're 
+- only foucssing on non-profit domain now - see disclaimer above
+- explanation of diagram
+- 2 ADRs to support tech chosen in this domain: persistence and API
+- The end - long weekend :)
 
 ![c4](./assets/c4.png)
 
