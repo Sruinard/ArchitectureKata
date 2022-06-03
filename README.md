@@ -149,10 +149,14 @@ Level 4 (red box) shows further detail of the components within a service, also 
   [ADR0005 Expose service data through GraphQL](adr/00005-expose-fuctionality-through-graphql.md)
 
 - Non-profit data is persisted in data stores optimized for usage<br>
-  [ADR0006 RDBMS choice for non-profit data - NOT FINISHED]()<br>
+  [ADR0006 RDBMS choice for non-profit data - NOT WRITTEN]()<br>
   [ADR0007 ElasticSearch for querying non-profits](adr/00007-Elastic-for-non-profit-search.md)
 
 
+
+
+**Please note**
+Due to personal circumstances we have not been able to get as far as we had hoped. This is as far as we got.
 
 <!--
 Based on [federated graphql](./adr/00002-Integration-discoverability-and-search-through-federated-graphql.md) and [domains-expose-apis-through-subgraphs](./adr/00003-all-domains-expose-graphql-subgraphs.md), we come to the conclusion that integration between services is largely achieved through GraphQL federation. Each domain has its distinct subgraph which can be queried by external consumers through the graph api.
