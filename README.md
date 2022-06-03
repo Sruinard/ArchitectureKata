@@ -58,28 +58,29 @@ Two different profile's of the typical user of the platform (i.e. perona's) can 
 _Note:_ whereas the 'platform administrator' role is certainly also relevant required to operate the platform, no persona was created because a) there is no 'experience' of the platform that they will have to do their administrative tasks, that requires understanding of their character and b) time considerations. 
 
 ## User stories
+The following user-stories were top of mind when considering the usage of the platform:
 
-_User Story 1: [Engagement]_
+### User Story 1: [Engagement]
 
 As a **facilitator** I want to be able to share resources that have worked well for other candidates, so that candidates can take similer paths and be in a better situation to act/make decisions. --> sharing functionality
 
-_User Story 2: [Discovery]_
+### User Story 2: [Discovery]
 
 As a **facilitator** I want to be able to find/group/filter (discover/search) candidates with similar needs/profiles, so that I can recommend them services which can help them in improving their current situation. --> search + Proactive reachout
 
-_User Story 3: [Matching]_
+### User Story 3: [Matching]
 
 As a **facilitator** I want to know which candidates are potential consumers, such that I know who to target and I'm in the best place to help these candidates solve their problems / reach their goals
 
-_User Story 4: [Grow]_
+### User Story 4: [Grow]
 
 As a **lifelong-learner** I want to know what my weakpoints are, such that I can create a curriculum to overcome these weaknesses and have a change of landing my dream job.
 
-_User Story 5: [Reward]_
+### User Story 5: [Reward]
 
 As a **lifelong-learner** I want to know how much progress I have made, such that I remain motivated to reach my goals and can celebrate milestones along the way.
 
-_User Story 6: [Matching]_
+### User Story 6: [Matching]
 
 As a **lifelong-learner** I want to know which offerings best match the problem I try to solve/goal I try to reach, such that I can make deliberate decisions which enable me to solve my problem or reach my goal
 
@@ -91,19 +92,29 @@ We'll be leveraging a context diagram to create a simplified representation of o
 
 ## Domain Driven Design (DDD) Context Map (level 1 + 2)
 
-On a high level, the [context diagram](#defining-the-system-boundaries) provides a very rough overview of the actors and key components. In this section, we'll group them together in domains. The domains provide clear boundaries between services and team, improve isolation and deployability, and simplify accountability.
+On a high level, the [context diagram](#defining-the-system-boundaries) provides a very rough overview of the actors and key components. In this section, we'll group them together in domains. The domains provide clear boundaries between services and teams, improve isolation and deployability, and simplify accountability.
 
-The main parts identified in the context diagram, can roughly be grouped together in the following parts: Matching, Insights, Candidates, Non-profits.
+The main parts identified in the context diagram, can roughly be grouped together in the following domains: Non-profits, Candidates, Matching and Insights.
 
-These will be considered our domains (we'll cover how search and exploration is enabled through our technology choice in [Federated GraphQL](#federated-graphql) ). However, we believe one domain is missing. Activity plays a vital role within the entire solution. Consequently, we wan't to give it a separate domain to emphasize it's importance and have a dedicated team work on it to improve progress and innovation.
+- **Non-profits domain** stores all information about the non-profit organisations, their offerings and services within the platform. It provides onboarding- and search capabilities and is responsible for notifying the activity context about internal events. 
+
+- **Candidates domain** stores all information about the candidates, looking to benefit from the non-profit offerings. It offers search an discovery capabilities, asset storage capabilities (like resume etc.) and request submission capabilities. Also responsible for notifying the activity context about internal events. 
+
+- **Matching domain** service that is able to suggest non-profit-with-non-profit maches as well as candidate-with-non-profit matches. Retrieves data from candidate and non-profit context in order to achieve this. Also responsible for notifying the activity context about internal events.
+
+- **Insights domain** provides insights for candidates, non-profits as well as platform administrators for both operational as well as analytical purposes. It leverages all the beforementioned domains as well as the activities domain (see below).
+
+
+- **Activities domain** receives event notifications from all domains which enables a myriad of event-driven use-cases like notifications, time-series-analytics and engagement insights.
 
 The domain driven design context map looks as follows: ![DDD context map](./assets/DDD-context-map.png).
 
-The following (technical) relations are important. There is a partnership regarding the schema design and implementation between the matching context and Non-profit/Candidate Context. Althought the Matching context is the consumer, both the non-profits and candidate context reap the benefits from a good matching algorithm, resulting in eagerness from both parties to partner up.
+Please note the following (technical) relations:
+- There is a _partnership_ regarding the schema design and implementation between the matching context and Non-profit/Candidate Context. Althought the Matching context is the consumer, both the non-profits and candidate context reap the benefits from a good matching algorithm, resulting in eagerness from both parties to partner up.
 
-The activity context implements an Anti Corrruption layer to translate any concepts from other domains to its own domain. The activity context plays an important role as it is the central place from which insights can be derived (reports, but also search, discoverabilty and fill-in-the-gap)
+- The activity context implements an Anti Corrruption layer to translate any concepts from other domains to its own domain. The activity context plays an important role as it is the central place from which insights can be derived (reports, but also search, discoverabilty and fill-in-the-gap)
 
-The Insight Context conforms to the Activity Context's domain. It is a consumer without any power over the activity context and needs to conform (i.e. take it or leave it).
+- The Insight Context _conforms_ to the Activity Context's domain. It is a consumer without any power over the activity context and needs to conform (i.e. take it or leave it).
 
 ### DDD context-map in depth (level 3)
 
@@ -156,3 +167,13 @@ Summary:
 ## Federated GraphQL
 
 Reference: [Diversity Cyber Council Kata Requirements 2022](https://docs.google.com/document/d/1XjEpcGJ87xYg1eWN9eE0_tH7te5HcVAgPvoONLHY4qQ/edit#)
+
+
+
+### parking
+
+
+
+These will be considered our domains (we'll cover how search and exploration is enabled through our technology choice in [Federated GraphQL](#federated-graphql)).
+Additional to the previously mentioned 4 domains, we identified another domain: 'Activity' as it plays a vital role within the entire solution. 
+Consequently, we want to give it a separate domain to emphasize it's importance and have a dedicated team work on it to improve progress and innovation.
