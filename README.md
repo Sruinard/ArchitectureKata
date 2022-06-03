@@ -110,11 +110,11 @@ The main parts identified in the context diagram, can roughly be grouped togethe
 The domain driven design context map looks as follows: ![DDD context map](./assets/DDD-context-map.png).
 
 Please note the following (technical) relations:
-- There is a _partnership_ regarding the schema design and implementation between the matching context and Non-profit/Candidate Context. Althought the Matching context is the consumer, both the non-profits and candidate context reap the benefits from a good matching algorithm, resulting in eagerness from both parties to partner up.
+- There is a _partnership_ regarding the schema design and implementation between the _matching context_ and _Non-profit/Candidate context_. Althought the Matching context is the consumer, both the non-profits and candidate context reap the benefits from a good matching algorithm, resulting in eagerness from both parties to partner up.
 
-- The activity context implements an Anti Corrruption layer to translate any concepts from other domains to its own domain. The activity context plays an important role as it is the central place from which insights can be derived (reports, but also search, discoverabilty and fill-in-the-gap)
+- The _activity context_ implements an _Anti-corruption layer_ to translate any concepts from other domains to its own domain. The activity context plays an important role as it is the central place from which insights can be derived (reports, but also search, discoverabilty and fill-in-the-gap)
 
-- The Insight Context _conforms_ to the Activity Context's domain. It is a consumer without any power over the activity context and needs to conform (i.e. take it or leave it).
+- The _Insight Context_ has a _conformist_ relationship with the _Activity Context_'s domain. Because it is a consumer without any power over the activity context and therefore needs to conform (i.e. take it or leave it).
 
 ### DDD context-map in depth (level 3)
 
