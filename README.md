@@ -5,6 +5,10 @@ This repository contains the materials offered for submission, for our participa
 
 ## Executive Summary
 
+
+:triangular_flag_on_post: @TODO
+
+
 We are assigned to task to develop a platform, which:
 
 1. Solves the issues stemming from the decentralization and lack of support between nonprofits (i.e. gaps of service and reduced overall impact).
@@ -39,7 +43,7 @@ _technical_
 
 ## Ubiquitous Language (A language shared by all stakeholders)
 
-Idea taken from Ubiquitous Language (Domain Driven Design):
+The following list provides a list of definitions, to establish terms that are relevant for the content and ensure there are no misconceptions about what is meant by them.
 
 - **Non-profit organisation** ("non-profit") Group of people that aims to help under-represented demographics in the tech industry by facilitating education, training, and staffing opportunities to establish a sustainable and diverse talent pipeline to the workforce without a profit motive.
 - **Offering** collection of _services_ offered by a _non-profit_
@@ -47,12 +51,18 @@ Idea taken from Ubiquitous Language (Domain Driven Design):
 - **Candidate** A member of an under-represented demographic that, consumer of non-profit offerings that is deliverd via the platform
 - **Platform** An online system provided by the [Diversity Cyber Counsil](https://www.diversitycybercouncil.com/) both aimed at: helping, connecting and furthering candidates in their carreer in the tech industry, as well as support inter non-profit collaboration and sharing to fill in the gaps of service and overall impact.
 
-## Persona's
+_Idea borrowed from Eric Evan's book on Domain Driven Design - the Ubiquitous Language ([Domain-Driven Design : Tackling Complexity in the Heart of Software](https://www.dddcommunity.org/book/evans_2003/))_
+
+## Personas
+
+Two different profile's of the typical user of the platform (i.e. perona's) can be identified and described: 
 
 - **Non-profit (the facilitator)** Kobe, 42, grew up in the suburbs of Chicago. He has witnessed first hand how difficult it can be to break away from stigmas and get a better life. Since 5 years he has been investing his time in helping people from underrepresented backgrounds to land their dream job. One of the things he loves working on is providing teenagers a connected experience. An experience in which they feel supported and empowered. Jonathon is good add coaching and seeing how small pieces of the puzzle fit together.
 
 - **Candidate (the lifelong-learner)** Janine, 28, works 2 jobs at a supermarket and local restaurant, has the smarts and is eager to 'get out' bus doesn't know how. She has an interest in technology and would love to have a career at a tech company, but does not have the right education for it and therefore was not able to land a job in tech. She works long hours and doesn't make enough money to afford expensive training during working hours.
   She believes that given a chance for an interview, she'll be able to convince the company that she'll be of great value and is willing to learn anything to prove that.
+
+_Note:_ whereas the 'platform administrator' role is certainly also relevant required to operate the platform, no persona was created because a) there is no 'experience' of the platform that they will have to do their administrative tasks, that requires understanding of their character and b) time considerations. 
 
 ## User stories
 
