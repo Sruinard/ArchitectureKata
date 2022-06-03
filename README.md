@@ -19,7 +19,7 @@ This repository contains the materials offered for submission, for our participa
 _Context and introduction_
 - ['Splotlight Platform' - Program narrative](#splotlight-platform-program-narrative)
 - [Ubiquitous Language](#ubiquitous-language-a-language-shared-by-all-stakeholders)
-- [Persona's](#personas)
+- [Personas](#personas)
 
 _Technical implementation_
 - [User Stories](#user-stories)
