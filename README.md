@@ -110,7 +110,9 @@ The main parts identified in the context diagram, can roughly be grouped togethe
 
 - **Activities domain** receives event notifications from all domains which enables a myriad of event-driven use-cases like notifications, time-series-analytics and engagement insights.
 
-The domain driven design context map looks as follows: ![DDD context map](./assets/DDD-context-map.png).
+The domain driven design context map looks as follows: 
+
+![DDD context map](./assets/DDD-context-map.png).
 
 Please note the following (technical) relations:
 
@@ -122,14 +124,37 @@ Please note the following (technical) relations:
 
 ### DDD context-map in depth (level 3)
 
-**Please note**
-As mentioned, due to limited time we only detailed out the 'non-profit' domain.
-
-
-Functionality from the non-profit domain is exposed through a GraphQL endpoint. This decision is documented in [adr 00005 expose functionality through graphql](./adr/00005-expose-fuctionality-through-graphql.md).
+Based on the [C4 Model](https://c4model.com/) we can 'zoom in' from the context down to code/implementation. This looks as follows:
 
 ![c4](./assets/c4.png)
 
+Level 1 and 2 (grey and green boxes) have been covered in previous sections of this document. 
+
+
+Level 3 (the blue box) shows already some of the details of an implementation and the interaction between contexts, for which Architecture Decision Record (ADRs) have been written:
+
+- The contexts are implemented as autonomous, independent services, i.e. 'microservices'.<br>
+  [ADR0001 Microservices architecture](adr/00001-microservices-architecture-style.md)
+
+- The frontend will communicate to all the backend services through a single endpoint - a federated GraphQL endpoint:<br>
+  [ADR0002 Federated GraphQ Endpoint for Search and Discovery - NOT WRITTEN](adr/00002-Integration-discoverability-and-search-through-federated-graphql.md)
+
+- All the backend services post internal events onto a messaging solution that is consumed by the 'activity' service<br>
+  [ADR0003 Redis used for internal events - NOT WRITTEN](adr/00003-Redis-for-events.md)
+
+
+Level 4 (red box) shows further detail of the components within a service, also for which ADRs have been written. The diagram focusses on the 'non-profit' domain:
+
+- The service exposes a GraphQL endpoint for querying and modifying the data.<br>
+  [ADR0005 Expose service data through GraphQL](adr/00005-expose-fuctionality-through-graphql.md)
+
+- Non-profit data is persisted in data stores optimized for usage<br>
+  [ADR0006 RDBMS choice for non-profit data - NOT FINISHED]()<br>
+  [ADR0007 ElasticSearch for querying non-profits](adr/00007-Elastic-for-non-profit-search.md)
+
+
+
+<!--
 Based on [federated graphql](./adr/00002-Integration-discoverability-and-search-through-federated-graphql.md) and [domains-expose-apis-through-subgraphs](./adr/00003-all-domains-expose-graphql-subgraphs.md), we come to the conclusion that integration between services is largely achieved through GraphQL federation. Each domain has its distinct subgraph which can be queried by external consumers through the graph api.
 
 Moreover, all domains publish activity events to a message queue which is owned and consumed by the activity context. We choose to do this asynchronously as the activity context is not a user facing application. Besides using a message queue for publishing activities, we also leverage it for our notification service within the activity context.
@@ -176,3 +201,6 @@ Reference: [Diversity Cyber Council Kata Requirements 2022](https://docs.google.
 These will be considered our domains (we'll cover how search and exploration is enabled through our technology choice in [Federated GraphQL](#federated-graphql)).
 Additional to the previously mentioned 4 domains, we identified another domain: 'Activity' as it plays a vital role within the entire solution.
 Consequently, we want to give it a separate domain to emphasize it's importance and have a dedicated team work on it to improve progress and innovation.
+
+
+!-->
