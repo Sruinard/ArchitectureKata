@@ -1,4 +1,4 @@
-# Spring 2022 - O'Reilly Architecture Katas
+# Shokunin: Spring 2022 - O'Reilly Architecture Katas
 
 This repository contains the materials offered for submission, for our participation in the
 [O'Reilly Spring 2022 Architecture KATA class](https://learning.oreilly.com/featured/architectural-katas/) course.
